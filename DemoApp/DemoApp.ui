@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DemoAppClass</class>
+ <widget class="QMainWindow" name="DemoAppClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1040</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DemoApp</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="app::widgets::SelectFingerprint" name="selectFingerprint1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>241</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="app::widgets::SelectFingerprint" name="selectFingerprint2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>380</y>
+      <width>241</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Fingerprint1StepsButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>241</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Display Processing Steps</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Fingerprint2StepsButton">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>10</y>
+      <width>241</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Display Processing Steps</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="MorphingButton">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>500</y>
+      <width>251</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Morphing</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ResetButton">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>530</y>
+      <width>251</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+   <widget class="app::widgets::GuiLogger" name="Logger">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>410</y>
+      <width>761</width>
+      <height>141</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="app::widgets::DisplayFingerprint" name="Fingerprint1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>241</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="app::widgets::DisplayFingerprint" name="Fingerprint2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>40</y>
+      <width>241</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::WinPanel</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>0</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei UI Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Alignment</string>
+    </property>
+    <widget class="app::widgets::alignment::MinimalOverlay" name="AlignmentThreshold">
+     <property name="geometry">
+      <rect>
+       <x>181</x>
+       <y>30</y>
+       <width>61</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>181</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Size of minimal overlay</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>60</y>
+      <width>251</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei UI Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Cutline</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Orientation weight</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Frequency weight</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Minutia weight</string>
+     </property>
+    </widget>
+    <widget class="app::widgets::cutline::WeightingFactor" name="Ow">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>80</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="app::widgets::cutline::WeightingFactor" name="Vw">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>110</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="app::widgets::cutline::WeightingFactor" name="Mw">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>140</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Rotation step</string>
+     </property>
+    </widget>
+    <widget class="app::widgets::cutline::dynamic::DynamicCutlineGroup" name="DynamicCutline">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>241</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI Light</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="title">
+      <string>Dynamic Cutline</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>181</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>9</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Size of search area</string>
+      </property>
+     </widget>
+     <widget class="app::widgets::cutline::dynamic::SearchAreaSize" name="SearchArea">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>30</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="app::widgets::cutline::RotationStep" name="RotationStep">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>220</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>220</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft JhengHei UI</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>π /</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>151</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Intersection area width</string>
+     </property>
+    </widget>
+    <widget class="app::widgets::cutline::ItersectionAreaWidth" name="IntersectionAreaWidth">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>180</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="app::widgets::cutline::MorphingMethod" name="adaptiveMethod">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>20</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Adaptive</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="app::widgets::cutline::MorphingMethod" name="originalMethod">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>40</y>
+       <width>80</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Original</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Estimation method:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>390</y>
+      <width>251</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei UI Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Generator</string>
+    </property>
+    <widget class="app::widgets::generator::BorderWidth" name="BorderWidth">
+     <property name="geometry">
+      <rect>
+       <x>201</x>
+       <y>30</y>
+       <width>41</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>181</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Border width</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Microsoft YaHei UI</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Background gray color</string>
+     </property>
+    </widget>
+    <widget class="app::widgets::generator::BackgroundColor" name="BackgroundColor">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>60</y>
+       <width>51</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>0</y>
+      <width>261</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei UI</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>Morphed Fingerprint</string>
+    </property>
+    <widget class="app::widgets::DisplayFingerprint" name="Morphed">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>241</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::WinPanel</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="MorphingStepsButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>241</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>8</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Display Morphing Steps</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1040</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuChange_Sensor">
+    <property name="title">
+     <string>Change Sensor</string>
+    </property>
+    <addaction name="SYNTHETIC"/>
+    <addaction name="BERGDATA"/>
+    <addaction name="SECUGEN"/>
+    <addaction name="SAGEMMSO"/>
+   </widget>
+   <widget class="QMenu" name="menuTesting">
+    <property name="title">
+     <string>Testing</string>
+    </property>
+    <widget class="QMenu" name="menuMorphing">
+     <property name="title">
+      <string>Morphing</string>
+     </property>
+     <widget class="QMenu" name="testingResults">
+      <property name="title">
+       <string>Results</string>
+      </property>
+      <addaction name="testingResultsAdaptiveStatic"/>
+      <addaction name="testingResultsAdaptiveDynamic"/>
+      <addaction name="testingResultsStatic"/>
+      <addaction name="testingResultsDynamic"/>
+     </widget>
+     <addaction name="testingAdaptiveStatic"/>
+     <addaction name="testingAdaptiveDynamic"/>
+     <addaction name="testingStatic"/>
+     <addaction name="testingDynamic"/>
+     <addaction name="testingResults"/>
+    </widget>
+    <addaction name="testingProcessing"/>
+    <addaction name="menuMorphing"/>
+   </widget>
+   <addaction name="menuChange_Sensor"/>
+   <addaction name="menuTesting"/>
+  </widget>
+  <action name="BERGDATA">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Bergdata</string>
+   </property>
+   <property name="toolTip">
+    <string>S1</string>
+   </property>
+  </action>
+  <action name="SECUGEN">
+   <property name="text">
+    <string>SecuGen</string>
+   </property>
+   <property name="toolTip">
+    <string>S2</string>
+   </property>
+  </action>
+  <action name="SAGEMMSO">
+   <property name="text">
+    <string>Sagem MSO</string>
+   </property>
+   <property name="toolTip">
+    <string>S3</string>
+   </property>
+  </action>
+  <action name="SYNTHETIC">
+   <property name="text">
+    <string>Synthetic</string>
+   </property>
+   <property name="toolTip">
+    <string>Synthetic</string>
+   </property>
+  </action>
+  <action name="testingStatic">
+   <property name="text">
+    <string>Static</string>
+   </property>
+  </action>
+  <action name="testingStaticReal">
+   <property name="text">
+    <string>Static (Real)</string>
+   </property>
+  </action>
+  <action name="testingDynamic">
+   <property name="text">
+    <string>Dynamic</string>
+   </property>
+  </action>
+  <action name="testingDynamicReal">
+   <property name="text">
+    <string>Dynamic (Real)</string>
+   </property>
+  </action>
+  <action name="testingSynthetic">
+   <property name="text">
+    <string>Synthetic</string>
+   </property>
+  </action>
+  <action name="testingReal">
+   <property name="text">
+    <string>Real</string>
+   </property>
+  </action>
+  <action name="actionSynthetic">
+   <property name="text">
+    <string>Synthetic</string>
+   </property>
+  </action>
+  <action name="actionReal">
+   <property name="text">
+    <string>Real</string>
+   </property>
+  </action>
+  <action name="testingResultsStatic">
+   <property name="text">
+    <string>Static</string>
+   </property>
+  </action>
+  <action name="resultsStaticReal">
+   <property name="text">
+    <string>Static (Real)</string>
+   </property>
+  </action>
+  <action name="testingResultsDynamic">
+   <property name="text">
+    <string>Dynamic</string>
+   </property>
+  </action>
+  <action name="actionDynamic_Real">
+   <property name="text">
+    <string>Dynamic (Real)</string>
+   </property>
+  </action>
+  <action name="testingProcessing">
+   <property name="text">
+    <string>Processing</string>
+   </property>
+  </action>
+  <action name="testingAdaptiveStatic">
+   <property name="text">
+    <string>Adaptive Static</string>
+   </property>
+  </action>
+  <action name="testingAdaptiveDynamic">
+   <property name="text">
+    <string>Adaptive Dynamic</string>
+   </property>
+  </action>
+  <action name="testingResultsAdaptiveStatic">
+   <property name="text">
+    <string>Adaptive Static</string>
+   </property>
+  </action>
+  <action name="testingResultsAdaptiveDynamic">
+   <property name="text">
+    <string>Adaptive Dynamic</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>app::widgets::SelectFingerprint</class>
+   <extends>QComboBox</extends>
+   <header location="global">widgets/SelectFingerprint.h</header>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::DisplayFingerprint</class>
+   <extends>QLabel</extends>
+   <header location="global">widgets/DisplayFingerprint.h</header>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::GuiLogger</class>
+   <extends>QPlainTextEdit</extends>
+   <header location="global">widgets/GuiLogger.h</header>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::cutline::WeightingFactor</class>
+   <extends>QDoubleSpinBox</extends>
+   <header location="global">widgets/cutline/WeightingFactor.h</header>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::alignment::MinimalOverlay</class>
+   <extends>QSpinBox</extends>
+   <header location="global">widgets/alignment/MinimalOverlay.h</header>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::cutline::ItersectionAreaWidth</class>
+   <extends>QSpinBox</extends>
+   <header location="global">widgets/cutline/ItersectionAreaWidth.h</header>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::cutline::RotationStep</class>
+   <extends>QSpinBox</extends>
+   <header location="global">widgets/cutline/RotationStep.h</header>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::cutline::dynamic::DynamicCutlineGroup</class>
+   <extends>QGroupBox</extends>
+   <header location="global">widgets/cutline/dynamic/DynamicCutlineGroup.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::cutline::dynamic::SearchAreaSize</class>
+   <extends>QSpinBox</extends>
+   <header location="global">widgets/cutline/dynamic/SearchAreaSize.h</header>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::generator::BorderWidth</class>
+   <extends>QSpinBox</extends>
+   <header location="global">widgets/generator/BorderWidth.h</header>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::generator::BackgroundColor</class>
+   <extends>QSpinBox</extends>
+   <header location="global">widgets/generator/BackgroundColor.h</header>
+  </customwidget>
+  <customwidget>
+   <class>app::widgets::cutline::MorphingMethod</class>
+   <extends>QRadioButton</extends>
+   <header location="global">widgets/cutline/MorphingMethod.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="DemoApp.qrc"/>
+ </resources>
+ <connections/>
+</ui>

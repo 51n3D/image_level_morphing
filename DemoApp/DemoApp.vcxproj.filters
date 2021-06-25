@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files\action">
+      <UniqueIdentifier>{3648bfed-6864-4674-839e-a1c2785cd320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\action">
+      <UniqueIdentifier>{eb1a8040-3f69-4430-9de5-b5c4f506faa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\utils">
+      <UniqueIdentifier>{dacae7af-2fdb-4ba2-91ee-c8e8b53a5461}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\utils">
+      <UniqueIdentifier>{aec29975-7fbb-4b11-ab70-44454a1f4476}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\widgets">
+      <UniqueIdentifier>{5ba5923f-b3a3-4635-a605-9fa08a2481d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\widgets">
+      <UniqueIdentifier>{e54b0708-26ac-4136-a1ad-90970a595c09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\widgets\alignment">
+      <UniqueIdentifier>{62a13dc3-1899-4cf1-91b3-157a86f9f9ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\widgets\cutline">
+      <UniqueIdentifier>{27ef2de3-d7fd-4779-9811-6531ac3a256f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\widgets\cutline\dynamic">
+      <UniqueIdentifier>{cf838264-a35f-47a7-a5a0-f28152b88a41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\widgets\generator">
+      <UniqueIdentifier>{5c4c8905-0d42-4e59-add3-61a9833f7c16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\widgets\alignment">
+      <UniqueIdentifier>{933248a4-4103-45f0-8004-673e84cf6ec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\widgets\cutline">
+      <UniqueIdentifier>{f2323c19-3bde-49a4-b31e-ac864d2451f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\widgets\cutline\dynamic">
+      <UniqueIdentifier>{b4683495-0372-454d-8530-c854b27d6b4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\widgets\generator">
+      <UniqueIdentifier>{a861ef52-6d3d-475e-8a46-a6ee751066a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="DemoApp.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="DemoApp.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DemoApp.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="action\TestCase.cpp">
+      <Filter>Source Files\action</Filter>
+    </ClCompile>
+    <ClCompile Include="action\ActionManager.cpp">
+      <Filter>Source Files\action</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\OpenCVToQtConvertor.cpp">
+      <Filter>Source Files\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\generator\BorderWidth.cpp">
+      <Filter>Source Files\widgets\generator</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\generator\BackgroundColor.cpp">
+      <Filter>Source Files\widgets\generator</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\cutline\dynamic\DynamicCutlineGroup.cpp">
+      <Filter>Source Files\widgets\cutline\dynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\cutline\ItersectionAreaWidth.cpp">
+      <Filter>Source Files\widgets\cutline</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\alignment\MinimalOverlay.cpp">
+      <Filter>Source Files\widgets\alignment</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\cutline\WeightingFactor.cpp">
+      <Filter>Source Files\widgets\cutline</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\cutline\dynamic\SearchAreaSize.cpp">
+      <Filter>Source Files\widgets\cutline\dynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\cutline\RotationStep.cpp">
+      <Filter>Source Files\widgets\cutline</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\SelectFingerprint.cpp">
+      <Filter>Source Files\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\GuiLogger.cpp">
+      <Filter>Source Files\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\FingerprintStepsDialog.cpp">
+      <Filter>Source Files\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\DisplayFingerprint.cpp">
+      <Filter>Source Files\widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="DemoApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\cutline\MorphingMethod.cpp">
+      <Filter>Source Files\widgets\cutline</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="action\TestCase.h">
+      <Filter>Header Files\action</Filter>
+    </QtMoc>
+    <QtMoc Include="action\ActionManager.h">
+      <Filter>Header Files\action</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\DisplayFingerprint.h">
+      <Filter>Header Files\widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\FingerprintStepsDialog.h">
+      <Filter>Header Files\widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\GuiLogger.h">
+      <Filter>Header Files\widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\SelectFingerprint.h">
+      <Filter>Header Files\widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\generator\BackgroundColor.h">
+      <Filter>Header Files\widgets\generator</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\generator\BorderWidth.h">
+      <Filter>Header Files\widgets\generator</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\cutline\WeightingFactor.h">
+      <Filter>Header Files\widgets\cutline</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\cutline\dynamic\DynamicCutlineGroup.h">
+      <Filter>Header Files\widgets\cutline\dynamic</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\cutline\dynamic\SearchAreaSize.h">
+      <Filter>Header Files\widgets\cutline\dynamic</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\cutline\RotationStep.h">
+      <Filter>Header Files\widgets\cutline</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\alignment\MinimalOverlay.h">
+      <Filter>Header Files\widgets\alignment</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\cutline\ItersectionAreaWidth.h">
+      <Filter>Header Files\widgets\cutline</Filter>
+    </QtMoc>
+    <QtMoc Include="DemoApp.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\cutline\MorphingMethod.h">
+      <Filter>Header Files\widgets\cutline</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utils\OpenCVToQtConvertor.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

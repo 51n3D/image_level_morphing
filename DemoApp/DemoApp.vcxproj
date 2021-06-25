@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{47274082-161A-4189-B457-7E05944BC690}</ProjectGuid>
+    <Keyword>QtVS_v302</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>Qt 5.14</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>Qt 5.14</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>..\Matching\include;..\Morphing\include;..\Processing\include;$(OPENCV_DIR)\..\..\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Matching.lib;Morphing.lib;Processing.lib;opencv_world412d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\x64\Debug;$(OPENCV_DIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>..\Matching\include;..\Morphing\include;..\Processing\include;$(OPENCV_DIR)\..\..\include;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\x64\Release;$(OPENCV_DIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Matching.lib;Morphing.lib;Processing.lib;opencv_world412.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <QtUic Include="DemoApp.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="DemoApp.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DemoApp.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="action\ActionManager.cpp" />
+    <ClCompile Include="action\TestCase.cpp" />
+    <ClCompile Include="DemoApp.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="utils\OpenCVToQtConvertor.cpp" />
+    <ClCompile Include="widgets\alignment\MinimalOverlay.cpp" />
+    <ClCompile Include="widgets\cutline\dynamic\DynamicCutlineGroup.cpp" />
+    <ClCompile Include="widgets\cutline\dynamic\SearchAreaSize.cpp" />
+    <ClCompile Include="widgets\cutline\ItersectionAreaWidth.cpp" />
+    <ClCompile Include="widgets\cutline\MorphingMethod.cpp" />
+    <ClCompile Include="widgets\cutline\RotationStep.cpp" />
+    <ClCompile Include="widgets\cutline\WeightingFactor.cpp" />
+    <ClCompile Include="widgets\DisplayFingerprint.cpp" />
+    <ClCompile Include="widgets\FingerprintStepsDialog.cpp" />
+    <ClCompile Include="widgets\generator\BackgroundColor.cpp" />
+    <ClCompile Include="widgets\generator\BorderWidth.cpp" />
+    <ClCompile Include="widgets\GuiLogger.cpp" />
+    <ClCompile Include="widgets\SelectFingerprint.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="action\ActionManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="action\TestCase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="widgets\cutline\MorphingMethod.h" />
+    <QtMoc Include="DemoApp.h" />
+    <ClInclude Include="utils\OpenCVToQtConvertor.h" />
+    <QtMoc Include="widgets\SelectFingerprint.h" />
+    <QtMoc Include="widgets\GuiLogger.h" />
+    <QtMoc Include="widgets\FingerprintStepsDialog.h" />
+    <QtMoc Include="widgets\DisplayFingerprint.h" />
+    <QtMoc Include="widgets\generator\BorderWidth.h" />
+    <QtMoc Include="widgets\generator\BackgroundColor.h" />
+    <QtMoc Include="widgets\cutline\WeightingFactor.h" />
+    <QtMoc Include="widgets\cutline\RotationStep.h" />
+    <QtMoc Include="widgets\cutline\ItersectionAreaWidth.h" />
+    <QtMoc Include="widgets\cutline\dynamic\SearchAreaSize.h" />
+    <QtMoc Include="widgets\cutline\dynamic\DynamicCutlineGroup.h" />
+    <QtMoc Include="widgets\alignment\MinimalOverlay.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
